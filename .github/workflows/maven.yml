@@ -26,3 +26,8 @@ jobs:
         maven-version: 3.5.4
     - name: Build with Maven
       run: mvn -B package --file pom.xml
+    - name: Saving test results
+      uses: actions/upload-artifact@v2
+      with:
+        name: serenity-report
+        path: target/site
