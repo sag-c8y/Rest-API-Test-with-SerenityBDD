@@ -31,3 +31,5 @@ jobs:
       with:
         name: serenity-report
         path: target/site
+    - name: Packaging
+      run: mvn deploy -Dregistry=https://maven.pkg.github.com/sag-c8y -Dtoken=GH_TOKEN
